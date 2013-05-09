@@ -1,0 +1,26 @@
+{
+  "name": "FlexGrid",
+  "version": "0.0.0",
+  "main": "./*.scss, _mixins.scss",
+  "ignore": [
+    "**/.*",
+    "*.rb",
+    "node_modules",
+    "components",
+    "images",
+    "index.html",
+    "scripts",
+    "gridScss.esproj",
+    "_*.scss"
+  ],
+  "gitHead": "b7416a33bac16191f191367627bf48e42a77effc",
+  "readme": "You know how to use CSS.",
+  "readmeFilename": "readme.md",
+  "_id": "FlexGrid@1.4.1",
+  "description": "You know how to use CSS.",
+  "commit": "b7416a33bac16191f191367627bf48e42a77effc",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yramagicman/FlexGrid.git"
+  }
+}

@@ -1,0 +1,73 @@
+/*!
+Theme Name: Single Column
+Theme URI: https://github.com/yramagicman/_skeletheme
+Description: Description
+Version: 1.0
+Author: Jonathan Gilson
+Author URI: http://www.perpetuallycreative.com
+Tags: black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, blavatar, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, front-page-post-form, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, holiday, photoblogging, seasonal
+License:GPL
+License URI: http://www.gnu.org/licenses/gpl.html*/
+/*
+Make sure you're working with the SCSS file!
+*/
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+@import "../components/FlexGrid/mixins.scss";
+@import "../fonts/lane/stylesheet.css";
+/* @group normalize */
+@import "_normalize.scss";
+/* @end */
+/* @group grid */
+@import "../components/FlexGrid/grid.scss";
+
+/* @end */
+/* @group type and images */
+@import "_type-and-images.scss";
+/* @end */
+/* @group mobile layout */
+  /* Styles */
+  @import "_mobile_layout.scss";
+
+/* @end*/
+/* @group tablet layout */
+@media only screen and (min-width: 768px) {
+  /* @group navigation */
+  @import "_nav.scss";
+  /* @end */
+  /* Styles */
+  @import "_tablet_layout.scss";
+  .mobileOnly {
+    display: none;
+  }
+}
+
+/* @end */
+/* @group desktop layout */
+
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  @import "_desktop_layout.scss";
+}
+
+/* @end */
+/* @group forms */
+@import "_forms.scss";
+
+/* @end */
+/* @group required */
+@import "_required.scss";
+/* @end */
+
+/* @group utility classes */
+@import "_utility_classes.scss";
+
+/* @end */
+.lt-ie9 {
+  .mobileOnly {
+    display: none;
+  }
+}
+@media print{
+    @imprort "_print.scss";
+}

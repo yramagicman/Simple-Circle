@@ -1,0 +1,116 @@
+/* @group global classes */
+// grid definitions
+@import "mixins.scss";
+$pageWidth: 1200px;
+$desktopPageWidth: $pageWidth;
+$ipadPageWidthPortrait: 700px;
+$ipadPageWidthLandscape: 1000px;
+$numCols: 12;
+$gutter: 0.05;
+$offset: 5.5;
+
+
+// classes
+$classSlug: span !default;
+$no-margin: no-margin !default;
+$addBorder: add-border !default;
+$push: push !default;
+$pull: pull !default;
+$offsetSlug: offset !default;
+
+.container {
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+}
+
+.row {
+//  overflow: hidden;
+  clear: both;
+  position: relative;
+  width: 100%;
+  @include clearfix;
+}
+
+.col {
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+/* @end */
+/* @group default grid*/
+@for $i from 1 through $numCols {
+  .#{$classSlug}#{$i} {
+    $xwidth: percentage($i / $numCols);
+    margin-left: percentage($gutter);
+    width: $xwidth - $gutter * 100;
+    // because the gutter is a percentage width, the var is exprssed as a decimal, this number multiplied by the decimal provides the optimum collumn width.
+
+  }
+}
+
+/* remove margins from every first child */
+.span1:first-child {
+  margin-left: 0;
+}
+
+@for $i from 1 through $numCols {
+  .#{$classSlug}#{$i}:first-child {
+    @extend .span1:first-child;
+  }
+}
+
+/* @end */
+/* @group no margin */
+@for $i from 1 through $numCols {
+  .#{$classSlug}#{$i}-#{$no-margin} {
+    $xwidth: percentage($i / $numCols);
+    width: $xwidth;
+    margin-left: 0;
+  }
+}
+
+/* @end */
+/* @group with a border */
+.#{$addBorder} {
+  @include addBorder(1px, $borderStyle, $borderColor);
+}
+/* @end */
+/* @group pull and push*/
+@for $i from 1 through $numCols {
+  .#{$pull}-#{$classSlug}#{$i} {
+    $xwidth: percentage($i / $numCols);
+    $offsetPos: $xwidth;
+    left: 100 - $xwidth;
+    width: $xwidth;
+    margin-left: 0;
+
+  }
+}
+
+@for $i from 1 through $numCols {
+  .#{$push}-#{$classSlug}#{$i} {
+    $xwidth: percentage($i / $numCols);
+    $offsetPos: $xwidth;
+    left: (100 - $xwidth) * -1;
+    //@include clearfix;
+    width: $xwidth - $gutter * 98;
+    margin-left: 0;
+
+  }
+}
+
+/* @end */
+/* @group offset*/
+@for $i from 1 through $numCols - 1 {
+  .#{$offsetSlug}#{$i} {
+    $xwidth: percentage($i / $numCols);
+    margin-left: $xwidth - 4.49;
+    &:first-child {
+      margin-left: $xwidth - 4.49;
+
+    }
+  }
+}
+/* @end */

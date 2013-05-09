@@ -1,0 +1,604 @@
+/*
+Theme Name: WordpressHTML5
+Theme URI: https://github.com/yramagicman/wordpressHTML5
+Description: Description
+Version: 1.1
+Author: Jonathan Gilson
+Author URI: http://www.perpetuallycreative.com
+Tags: full-width-template
+License: GPL
+License URI: http://www.gnu.org/licenses/gpl.html
+*/
+/*
+If you're not using a SASS/Compass edit this css file and rename it to style.css
+Normalize ends on line 259.
+Form styling starts on 273.
+Wordpress Core styling starts on line 322
+Utility classes begin on line 417
+Print styling starts on line 528
+*/
+/*
+If you're not using a SASS/Compass edit this css file and rename it to style.css
+
+*/
+/* @group normalize */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+span,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Droid Serif", Georgia, serif;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: #444444;
+}
+
+* html {
+  font-size: 100%;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.7em;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+small {
+  font-size: 75%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+nav ul,
+nav ol {
+  list-style: none;
+  clear: both;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* @end */
+@media only screen and (min-width: 320px) {
+  /* Mobile Styles */
+}
+/* @end*/
+/* @group tablet layout */
+@media only screen and (min-width: 768px) {
+  /* Tablet Styles */
+}
+/* @end */
+/* @group desktop layout */
+@media only screen and (min-width: 1224px) {
+  /* Desktop Styles */
+}
+/* @end */
+/* @group forms */
+input, textarea, select[size] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background: white;
+  padding: 5px;
+  margin: 2px;
+}
+
+select {
+  margin: 5px;
+}
+
+input[type=date], input[type=time], input[type=color], input[type=datetime] {
+  padding: 0;
+  background: #fff;
+}
+input[type=range] {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+input[type=submit], .button {
+  background: #FFFFFFFF;
+  background: white;
+  background: -moz-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #cccccc));
+  background: -webkit-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -ms-linear-gradient(top, white 0%, #cccccc 100%);
+  background: -o-linear-gradient(top, white 0%, #cccccc 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #cccccc 100%);
+  box-shadow: none;
+}
+
+textarea {
+  width: 90%;
+  height: 7em;
+}
+
+input:focus, textarea:focus {
+  background-color: #fff;
+  background-image: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* @end */
+/* @group WordPress required */
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-caption {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 5px 3px 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption .wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 0 4px 5px;
+}
+
+.sticky, .gallery-caption, .bypostauthor {
+  color: inherit;
+}
+
+.form-allowed-tags {
+  font-size: 80%;
+}
+
+/* @end */
+/* @group utility classes */
+.action {
+  background: #FF7A9FE6;
+  background: #7a9fe6;
+  background: -moz-linear-gradient(top, #7a9fe6 0%, #2861d3 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7a9fe6), color-stop(100%, #2861d3));
+  background: -webkit-linear-gradient(top, #7a9fe6 0%, #2861d3 100%);
+  background: -ms-linear-gradient(top, #7a9fe6 0%, #2861d3 100%);
+  background: -o-linear-gradient(top, #7a9fe6 0%, #2861d3 100%);
+  background: linear-gradient(to bottom, #7a9fe6 0%, #2861d3 100%);
+  text-shadow: 0 1px 1px #030812;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.action:link, .action:visited {
+  color: white;
+}
+.action:hover {
+  text-shadow: 0 -1px 1px #030812;
+}
+.action:active {
+  background: #FF2861D3;
+  background: #2861d3;
+  background: -moz-linear-gradient(top, #2861d3 0%, #7a9fe6 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2861d3), color-stop(100%, #7a9fe6));
+  background: -webkit-linear-gradient(top, #2861d3 0%, #7a9fe6 100%);
+  background: -ms-linear-gradient(top, #2861d3 0%, #7a9fe6 100%);
+  background: -o-linear-gradient(top, #2861d3 0%, #7a9fe6 100%);
+  background: linear-gradient(to bottom, #2861d3 0%, #7a9fe6 100%);
+}
+
+.button {
+  text-shadow: 0 1px 1px white;
+  padding: 5px 10px;
+  border: 1px solid gray;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.button:link, .button:visited {
+  color: black;
+}
+.button:hover {
+  text-shadow: 0 -1px 1px white;
+}
+.button:active {
+  background: #FFCCCCCC;
+  background: #cccccc;
+  background: -moz-linear-gradient(top, #cccccc 0%, white 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cccccc), color-stop(100%, white));
+  background: -webkit-linear-gradient(top, #cccccc 0%, white 100%);
+  background: -ms-linear-gradient(top, #cccccc 0%, white 100%);
+  background: -o-linear-gradient(top, #cccccc 0%, white 100%);
+  background: linear-gradient(to bottom, #cccccc 0%, #ffffff 100%);
+}
+
+.zero-margin {
+  margin: 0;
+}
+
+.zero-padding {
+  padding: 0;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.chromeframe {
+  clear: both;
+}
+
+/* @end */
+@media print {
+  body {
+    margin: 0.25in 0.5in;
+  }
+
+  nav, header {
+    display: none;
+  }
+
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .chromeframe {
+    display: none !important;
+  }
+}

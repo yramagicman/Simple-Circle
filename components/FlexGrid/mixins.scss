@@ -1,0 +1,83 @@
+@import "compass/typography/vertical_rhythm";
+@import "compass/css3";
+
+$base-font-size: 16px;
+$base-line-height: $base-font-size * 1.7;
+$font-size: $base-font-size;
+$borderColor: black;
+@mixin clearfix {
+  //&{clear:both;}
+  &:after, &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+$lines: 0.5;
+$borderWidth: 1;
+$borderStyle: solid !default;
+
+@mixin lrPad($padding: 0.5em) {
+  padding: 0 $padding;
+}
+
+@mixin addBorder($borderWidth: 1px, $borderStyle: solid, $color: $borderColor, $colWidth: 1) {
+  @include rhythm-borders($borderWidth, $lines, $font-size, $borderStyle);
+  @include margin-leader(0.5);
+  border-color: $color;
+  //width: $colWidth - $offset;
+  & h2, & p {
+    margin-top: 0;
+  }
+}
+
+@mixin tbBorder($borderWidth: 1px, $borderStyle: solid, $color: $borderColor) {
+  @include leading-border($borderWidth, $lines, $font-size, $borderStyle);
+  @include trailing-border($borderWidth, $lines, $font-size, $borderStyle);
+  border-color: $color;
+}
+
+@mixin lrBorder($borderWidth: 1px, $borderStyle: solid, $color: $borderColor, $offset: 5, $colWidth: 0.1) {
+  @include apply-side-rhythm-border(left, $borderWidth, $lines, $font-size, $borderStyle);
+  @include apply-side-rhythm-border(right, $borderWidth, $lines, $font-size, $borderStyle);
+  border-color: $color;
+  width: percentage($colWidth - $offset);
+}
+
+@mixin tBorder($borderWidth: 1px, $borderStyle: solid, $color: $borderColor) {
+  @include leading-border($borderWidth, $lines, $font-size, $borderStyle);
+}
+
+@mixin bBorder($borderWidth: 1px, $borderStyle: solid, $color: $borderColor) {
+  @include trailing-border($borderWidth, $lines, $font-size, $borderStyle);
+}
+
+@mixin simpleGradient($startColor:#fff, $endColor: #000) {
+  background: ie-hex-str($startColor);
+  background: $startColor;
+  background: -moz-linear-gradient(top, $startColor 0%, $endColor 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor));
+  background: -webkit-linear-gradient(top, $startColor 0%, $endColor 100%);
+  background: -o-linear-gradient(top, $startColor 0%, $endColor 100%);
+  //	background: -ms-linear-gradient(top, $startColor 0%, $endColor 100%);
+  background: linear-gradient(to bottom, $startColor 0%, $endColor 100%);
+  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$startColor, endColorstr= $endColor,GradientType=0 );
+}
+// box-shadow
+@mixin boxShadow($hoffset:1px, $voffset:1px, $blur:1px, $spread:1px, $color:#000, $inset:false ) {
+    @if ($inset == false) {
+        -webkit-box-shadow: $hoffset $voffset $blur $spread $color;
+        box-shadow: $hoffset $voffset $blur $spread $color;   
+    }
+    @if $inset == inset {
+        -webkit-box-shadow: $hoffset $voffset $blur $spread $color $inset;
+        box-shadow: $hoffset $voffset $blur $spread $color $inset;   
+    }
+}
+@mixin transition($property, $duration, $style){
+ -webkit-transition: $property $duration $style;
+ -moz-transition: $property $duration $style;
+ -o-transition: $property $duration $style;
+ -ms-transition: $property $duration $style;
+ transition: $property $duration $style;
+}
