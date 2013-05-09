@@ -14,7 +14,7 @@ Make sure you're working with the SCSS file!
 @import "compass/typography/vertical_rhythm";
 @import "compass/css3";
 @import "../components/FlexGrid/mixins.scss";
-@import "../fonts/lane/stylesheet.css";
+@import "../fonts/lane/_stylesheet.scss";
 /* @group normalize */
 @import "_normalize.scss";
 /* @end */
