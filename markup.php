@@ -8,7 +8,7 @@
     <?php else:
         // if not, make room for the sidebar
         ?>
-        <div id="body" class="body col span9 alignright">
+        <div id="body" class="body col span8 alignright">
     <?php endif;?>
     <!-- spare div, if you need it. -->
         <div id="padding" class="padding">
@@ -37,14 +37,14 @@
                 <!--end meta-->
                 <article class="post-content">
                     <?php
-                    if (is_single() or is_page()) {
+                    // if (is_single() or is_page()) {
                         // show full post where appropriate
                         the_content();
-                    } else {
+                    // } else {
                         // otherwise show the thumbnail and excerpt
-                        the_post_thumbnail();
-                        the_excerpt();
-                    }
+                        // the_post_thumbnail();
+                        // the_excerpt();
+                    // }
                     ?>
                 </article>
                 <!--
@@ -71,6 +71,12 @@
                     <?php edit_post_link('Edit this entry?','',''); ?>
                 </small>
             <?php endif; ?>
+            <?php if (function_exists('wp_list_comments') ): ?>
+              <div class="comments clearfix">
+            <!-- WP 2.7 and above -->
+            <?php comments_template('', true); ?>
+            </div>
+            <?php endif;?>
             <?php endwhile; // end of loop
             // if we don't have any posts, inform the readers that they broke the internet
              else: ?>

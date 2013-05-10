@@ -16,16 +16,16 @@
 <body <?php body_class(); ?>>
 <a href="#content" class="visuallyHidden">Skip To Content</a>
 <div id="container" class="container">
-  <header class="col span3">
-    <span class="head-text">
-      <h1 id="blogTitle" class="blogTitle">
+  <header class="col span4">
+    <div class="inner">
+      <h1 id="page-title" class="page-title">
         <a href="<?php echo home_url(); ?>"><?php bloginfo('name');?></a>
       </h1>
-      <h1 id="tagLine" class="tagLine">
+      <h1 id="sub-title" class="sub-title">
         <?php bloginfo('description');?>
       </h1>
-    </span>
+    </div>
    <nav id="nav" class="span12-no-margin"><?php _skele_header_menu(); ?></nav>
   </header>
   <a href="#nav" class="mobileOnly shownav">Show Navigation</a>
-  <a href="#sidebar" class="mobileOnly shownav">Sidebar</a>
+  <a href="#sidebar" class="mobileOnly showsidebar">Sidebar</a>

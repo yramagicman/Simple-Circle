@@ -10,8 +10,8 @@
 $legacy-ie: false !default;
 
 // Set the default font family here so you don't have to override it later
-$font_family: "Droid Serif", Georgia, serif !default;
-$heading-font_family: "LaneNarrowRegular", Helvetica, sans-serif !default;
+$font_family: Helvetica, Arial, sans-serif !default;
+$heading-font_family: "LaneNarrowRegular", "Helvetica Neue", sans-serif !default;
 
 //fonts
 $base-font-size: 16px;
@@ -35,10 +35,10 @@ $h6_margin: 2.33em 0 !default;
 
 //Color scheme
 $base: #444;
-$secondary: #dd9400;
+$secondary: #007800;
 $darken-base: darken($base, 20%);
 $lighten-base: lighten($base, 20%);
-$lighten-secondary: lighten($secondary, 20%);
+$lighten-secondary: lighten($secondary, 10%);
 $darken-secondary: darken($secondary, 10%);
 
 $textColor: $base;
@@ -50,8 +50,8 @@ $visited: $lighten-base;
 $borderColor: $base;
 
 //Gradients
-$startColor: lighten($base, 5%);
-$endColor: darken($base, 20%);
+$startColor: lighten($bgColor, 5%);
+$endColor: darken($bgColor, 20%);
 $startActionColor: lighten($action, 15%);
 $endActionColor: darken($action, 5%);
 
@@ -189,31 +189,37 @@ a {
     font-size: $h1_font_size;
     margin: $h1_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
   h2 {
     font-size: $h2_font_size;
     margin: $h2_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
   h3 {
     font-size: $h3_font_size;
     margin: $h3_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
   h4 {
     font-size: $h4_font_size;
     margin: $h4_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
   h5 {
     font-size: $h5_font_size;
     margin: $h5_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
   h6 {
     font-size: $h6_font_size;
     margin: $h6_margin;
     font-family: $heading_font_family;
+    font-weight:100;
   }
 }
 

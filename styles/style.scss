@@ -11,6 +11,10 @@ License URI: http://www.gnu.org/licenses/gpl.html*/
 /*
 Make sure you're working with the SCSS file!
 */
+@function em($target, $context: $base-font-size) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
 @import "compass/typography/vertical_rhythm";
 @import "compass/css3";
 @import "../components/FlexGrid/mixins.scss";
@@ -31,7 +35,7 @@ Make sure you're working with the SCSS file!
 
 /* @end*/
 /* @group tablet layout */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: em(768px, $base-font-size)) {
   /* @group navigation */
   @import "_nav.scss";
   /* @end */
@@ -45,7 +49,7 @@ Make sure you're working with the SCSS file!
 /* @end */
 /* @group desktop layout */
 
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: em(1224px, $base-font-size)) {
   /* Styles */
   @import "_desktop_layout.scss";
 }
@@ -69,5 +73,5 @@ Make sure you're working with the SCSS file!
   }
 }
 @media print{
-    @imprort "_print.scss";
+    @import "_print.scss";
 }
