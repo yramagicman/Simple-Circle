@@ -10,6 +10,7 @@ header.col {
     overflow:hidden;
     width:100%;
     text-align:center;
+    height:em(280px,$base-font-size);
 }
 .page-title {
     position:relative;
@@ -25,7 +26,6 @@ header.col {
 .container {
   width: $pageWidth;
   overflow:hidden;
-  @include transition(all, 500ms, ease);
 }
 .col{
   min-width:0;
@@ -38,7 +38,7 @@ header.col {
 .body{
     max-width:em(568px, $base-font-size);
     z-index: 1;
-    @include transition(all, 500ms, ease);
+//    @include transition(all, 500ms, ease);
 }
 
 /*iPads (landscape)*/
@@ -79,8 +79,10 @@ header.col {
   header {
   }
   .inner{
-      border-radius: 0;
       padding:5px;
+      border-radius: 20px;
+      min-height:em(205px, $base-font-size);
+      height:auto;
   }
   .page-title, .sub-title {
       position:static;

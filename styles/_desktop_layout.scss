@@ -9,7 +9,11 @@ $pageWidth: $desktopPageWidth;
 nav ul {
     width: $pageWidth;
 }
-
+header{
+    .inner{
+        height:em(328px, $base-font-size);
+    }
+}
 //@include establish-baseline();
 .container {
     width: $pageWidth;

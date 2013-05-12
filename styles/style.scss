@@ -40,6 +40,7 @@ Make sure you're working with the SCSS file!
   @import "_nav.scss";
   /* @end */
   /* Styles */
+  @import "_sidebar.scss";
   @import "_tablet_layout.scss";
   .mobileOnly {
     display: none;

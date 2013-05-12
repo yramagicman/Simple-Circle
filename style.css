@@ -736,6 +736,11 @@ a:hover, a:active {
 .container {
   width: 95%;
   margin: 15px;
+  -webkit-transition: width 500ms ease;
+  -moz-transition: width 500ms ease;
+  -o-transition: width 500ms ease;
+  -ms-transition: width 500ms ease;
+  transition: width 500ms ease;
 }
 
 header {
@@ -744,6 +749,14 @@ header {
 
 .inner {
   border: 1px solid black;
+  padding: 5px;
+  min-height: 8em;
+  -webkit-transition: height 500ms ease;
+  -moz-transition: height 500ms ease;
+  -o-transition: height 500ms ease;
+  -ms-transition: height 500ms ease;
+  transition: height 500ms ease;
+  border-radius: 20px;
 }
 
 .menu {
@@ -776,17 +789,21 @@ h1 a:hover, h2 a:hover {
   color: #00ab00;
 }
 
+s
 #nav:target {
   width: 100%;
   height: auto;
 }
+s
 #nav:target ul {
   display: block;
   top: 0px;
   z-index: 10;
   width: 100% !important;
 }
-#nav:target a:link, #nav:target a:visited {
+s
+#nav:target a:link, s
+#nav:target a:visited {
   display: block;
   background: white;
   color: #444444;
@@ -795,6 +812,7 @@ h1 a:hover, h2 a:hover {
   padding: 5px;
   text-decoration: none;
 }
+s
 #nav:target:after {
   content: "";
 }
@@ -922,6 +940,15 @@ h1 a:hover, h2 a:hover {
 
   /* @end */
   /* Styles */
+  .sidebar {
+    padding-left: 2%;
+  }
+  .sidebar ul, .sidebar li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
   /* @group global layout */
   header.col {
     clear: both;
@@ -933,6 +960,7 @@ h1 a:hover, h2 a:hover {
     overflow: hidden;
     width: 100%;
     text-align: center;
+    height: 17.5em;
   }
 
   .page-title {
@@ -947,13 +975,8 @@ h1 a:hover, h2 a:hover {
   }
 
   .container {
-    width: 1000px;
+    width: 62.5em;
     overflow: hidden;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    transition: all 500ms ease;
   }
 
   .col {
@@ -969,11 +992,6 @@ h1 a:hover, h2 a:hover {
   .body {
     max-width: 35.5em;
     z-index: 1;
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    -ms-transition: all 500ms ease;
-    transition: all 500ms ease;
   }
 
   /*iPads (landscape)*/
@@ -1007,7 +1025,7 @@ h1 a:hover, h2 a:hover {
 }
 @media only screen and (min-width: 48em) and (max-width: 64em) and (orientation: portrait) {
   .container {
-    width: 700px;
+    width: 43.75em;
   }
 
   nav li a {
@@ -1015,8 +1033,10 @@ h1 a:hover, h2 a:hover {
   }
 
   .inner {
-    border-radius: 0;
     padding: 5px;
+    border-radius: 20px;
+    min-height: 12.8125em;
+    height: auto;
   }
 
   .page-title, .sub-title {
@@ -1051,11 +1071,15 @@ h1 a:hover, h2 a:hover {
   /* Styles */
   /*start layout */
   nav ul {
-    width: 1200px;
+    width: 75em;
+  }
+
+  header .inner {
+    height: 20.5em;
   }
 
   .container {
-    width: 1200px;
+    width: 75em;
   }
 
   .content {

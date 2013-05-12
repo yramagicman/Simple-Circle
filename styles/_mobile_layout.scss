@@ -2,14 +2,21 @@
 .container {
   width: 95%;
   margin: 15px;
+  @include transition(width, 500ms, ease);
 }
 
 header {
   clear: both;
-//  @include transition(all, 500ms, ease);
 }
 .inner{
         border:1px solid black;
+        padding: 5px;
+        min-height:8em;
+        @include  transition(height, 500ms, ease);
+      border-radius: 20px;
+}
+.body{
+
 }
 .menu {
   width: 100%;
@@ -35,14 +42,7 @@ h1, h2{
     a:hover{
         color: $lighten-secondary;
     }
-}
-//nav .header-menu-list:before{
-//  content:"Hi";
-//  display:block;
-//  position:absolute;
-//  top:100em;
-//  left:0;
-//}
+}s
 #nav:target {
   width: 100%;
   height: auto;
