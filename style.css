@@ -1,11 +1,11 @@
 /*
-Theme Name: Single Column
+Theme Name: Simple Circle
 Theme URI: https://github.com/yramagicman/_skeletheme
 Description: Description
 Version: 1.0
 Author: Jonathan Gilson
 Author URI: http://www.perpetuallycreative.com
-Tags: black, blue, brown, gray, green, orange, pink, purple, red, silver, tan, white, yellow, dark, light, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, blavatar, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, front-page-post-form, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, holiday, photoblogging, seasonal
+Tags:gray, green, silver, white, light, two-columns, left-sidebar, flexible-width,custom-colors, custom-menu, featured-images, full-width-template, post-formats, sticky-post
 License:GPL
 License URI: http://www.gnu.org/licenses/gpl.html*/
 /*
@@ -1362,6 +1362,22 @@ a img.aligncenter {
 
 .force-show {
   display: block !important;
+}
+
+/* =Post Formats
+-------------------------------------------------------------- */
+.format-aside .post-title {
+  display: none;
+}
+.format-aside .meta {
+  display: none;
+}
+
+.format-status .post-title {
+  display: none;
+}
+.format-status .meta {
+  display: none;
 }
 
 /* @end */
