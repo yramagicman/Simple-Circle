@@ -37,25 +37,27 @@
                 <!--end meta-->
                 <article class="post-content">
                     <?php
-                    // if (is_single() or is_page()) {
+                    if (is_singular()) {
                         // show full post where appropriate
                         the_content();
-                    // } else {
+                    } else {
                         // otherwise show the thumbnail and excerpt
-                        // the_post_thumbnail();
-                        // the_excerpt();
-                    // }
+                        the_post_thumbnail();
+                        the_excerpt();
+                    }
                     ?>
                 </article>
                 <!--
                     TODO need logic to remove this empty markup from post nav, category nav and tags.
                 -->
+                <?php if (is_singular()): ?>
                 <nav class="post-nav">
                     <?php wp_link_pages( ); ?>
                 </nav>
                 <!--end article-->
+                <?php if (!is_page()): ?>
                 <aside class="cats">
-                    <?php the_category(); ?>
+                    Categories <?php the_category(', '); ?>
                 </aside>
                 <!--end categroies-->
             <?php if(has_tag()): ?>
@@ -63,7 +65,16 @@
                     <?php the_tags(); ?>
                 </aside>
                 <!-- end tags -->
-            <?php endif; ?>
+            <?php endif; 
+            // end has_tag()
+            ?>
+            <?php endif; 
+            // end !is_page()
+            ?>
+            <?php endif; 
+            //end global tag and category if
+            ?>
+
             </div>
             <!--end post-wrap-->
             <?php if ( current_user_can('edit_post', get_the_ID()) ) : ?>
