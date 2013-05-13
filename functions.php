@@ -1,6 +1,6 @@
 <?php
 if ( !isset( $content_width ) ) {
-    $content_width = 640;
+    $content_width = 568;
     /* pixels */
 } //!isset( $content_width )
 
@@ -8,7 +8,8 @@ require_once( 'inc/init.php' ); // if you remove this line your blog will die
 // enqueue CSS and JS
 require_once( 'inc/scripts-styles.php' ); // if you remove this line your blog will die
 // to enable custom headers uncomment the next line.
-require_once( 'inc/custom-header.php' );
+// require_once( 'inc/custom-header.php' );
+require_once( 'inc/theme-customizer.php' );
 // to enable custom background uncomment the next line.
 // require_once( 'inc/custom-bg.php' );
 // to use Jetpack infinite scroll, uncomment the next line.
@@ -101,7 +102,7 @@ function _skele_single_post_nav( ) {
 
 function _skele_page_title( $s, $post, $cat, $tag ) {
     $months   = array(
-         'January',
+        'January',
         'February',
         'March',
         'April',

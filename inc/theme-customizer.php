@@ -3,9 +3,19 @@ function _skele_customize_register($wp_customize) {
     //All our sections, settings, and controls will be added here
     $colors   = array();
     $colors[] = array(
-            'slug' => 'header_background_color',
-            'default' => '#c4532b',
-            'label' => __('Header and footer background color', '_skele')
+            'slug' => 'link_color',
+            'default' => '#444',
+            'label' => __('Link Color', '_skele')
+            );
+    $colors[] = array(
+            'slug' => 'visited_link_color',
+            'default' => '#777',
+            'label' => __('Visited Link Color', '_skele')
+            );
+    $colors[] = array(
+            'slug' => 'hover_link_color',
+            'default' => '#007800',
+            'label' => __('hovered Link Color', '_skele')
             );
 
     foreach ($colors as $color) {
@@ -26,15 +36,22 @@ function _skele_customize_register($wp_customize) {
 add_action('customize_register', '_skele_customize_register');
 
 function _skele_customize_function( ) {
-    $header_background_color = get_option('header_background_color');
+    $link_color = get_option('link_color');
+    $visited_link_color = get_option('visited_link_color');
+    $hovered_link_color = get_option('hover_link_color');
     ?>
         <style>
-        header, footer, header:before, header:after, .noshadow:before, .noshadow:after{
-            background:<?php echo $header_background_color ?>;
+        a:link{
+            color:<?php echo $link_color ?>;
+        }
+        a:visited{
+            color:<?php echo $visited_link_color ?>;
+        }
+        a:hover{
+            color:<?php echo $hovered_link_color ?>;
         }
     </style>
         <?php
 }
 add_filter('wp_head', '_skele_customize_function');
 ?>
-

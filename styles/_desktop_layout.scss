@@ -1,7 +1,7 @@
 /*start layout */
 $pageWidth: $desktopPageWidth;
 .col {
-    //  min-width: 0;
+   //   min-width: 0;
     //  position: relative;
     //  margin-left: percentage($gutter);
 }
@@ -11,23 +11,24 @@ nav ul {
 }
 header{
     .inner{
-        height:em(328px, $base-font-size);
+        height:em(300px, $base-font-size);
     }
 }
 //@include establish-baseline();
 .container {
     width: $pageWidth;
+    padding-right: 9em;
 }
 .content{
     overflow: visible;
 }
 .page-title {
     position:relative;
-    top:50%;
+    top:45%;
     margin-top:-18%;
 }
 .sub-title {
     position:relative;
-    top:50%;
+    top:45%;
 }
 /* end layout */

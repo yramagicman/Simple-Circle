@@ -15,14 +15,14 @@
     for (var i = elems.length - 1; i >= 0; i--) {
         wrapPad(elems[i]);
     }
-    j(window).resize(function() {
+    //j(window).resize(function() {
  //        if (j(document).innerWidth() > 768) {
-            var y = j('.inner').height();
+     //       var y = j('.inner').height();
             // j('.inner').height(y);
-            console.log(y);
+            //console.log(y);
  //        } else{
  //            j('.inner').removeAttr('style');
  //        }
-    });
+    //});
     j(window).trigger('resize');
 })(); // end menus

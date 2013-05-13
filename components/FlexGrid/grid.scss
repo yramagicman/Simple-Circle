@@ -1,7 +1,7 @@
 /* @group global classes */
 // grid definitions
 @import "mixins.scss";
-$pageWidth: em(1100px, $base-font-size);
+$pageWidth: em(1250px, $base-font-size);
 $desktopPageWidth: $pageWidth;
 $ipadPageWidthPortrait: em(700px, $base-font-size);
 $ipadPageWidthLandscape: em(1000px, $base-font-size);

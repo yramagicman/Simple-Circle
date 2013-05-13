@@ -1,6 +1,5 @@
 /* @group global layout */
 $pageWidth: $ipadPageWidthLandscape;
-
 header.col {
   clear: both;
   overflow:visible;
@@ -10,22 +9,22 @@ header.col {
     overflow:hidden;
     width:100%;
     text-align:center;
-    height:em(280px,$base-font-size);
+    height:em(270px, $base-font-size);
 }
 .page-title {
     position:relative;
     top:50%;
     margin-top:-27%;
-//    @include transition(all, 500ms, ease);
 }
 .sub-title {
     position:relative;
     top:50%;
 }
-
 .container {
   width: $pageWidth;
   overflow:hidden;
+  padding-right:3em;
+  box-shadow:-10px 0 8px -10px #999 inset;
 }
 .col{
   min-width:0;
@@ -38,9 +37,7 @@ header.col {
 .body{
     max-width:em(568px, $base-font-size);
     z-index: 1;
-//    @include transition(all, 500ms, ease);
 }
-
 /*iPads (landscape)*/
 .mobileOnly{display:none;}
 @media only screen and (max-width: em(1024px, $base-font-size)) and (orientation: landscape) {
@@ -58,21 +55,12 @@ header.col {
     margin-left: 0;
   }
 }
-
 /* iPads (portrait) ----------- */
-
 @media only screen and (max-width: em(1024px, $base-font-size)) and (orientation: portrait) {
   $pageWidth: $ipadPageWidthPortrait;
   .container {
     width: $pageWidth;
   }
-  //nav ul {
-//    margin: 0 auto;
-//    width: 100%;
-//    background: rgb(250, 250, 250);
-//    background: rgba(250, 250, 250, 0.5);
-//    overflow: hidden;
-//  }
   nav li a {
     padding: 10px;
   }
@@ -105,5 +93,4 @@ header.col {
     display: none;
   }
 }
-
 /* end layout */
