@@ -12,19 +12,6 @@ function _skele_register_custom_background( ) {
 
     } //function_exists( 'wp_get_theme' )
 
-
-    else {
-        /*
-        TODO nix else when 3.6 is released.
-        */
-        define( 'BACKGROUND_COLOR', $args[ 'default-color' ] );
-
-        if ( !empty( $args[ 'default-image' ] ) )
-            define( 'BACKGROUND_IMAGE', $args[ 'default-image' ] );
-
-        add_custom_background();
-    }
-
 }
 
 add_action( 'after_setup_theme', '_skele_register_custom_background' );?>

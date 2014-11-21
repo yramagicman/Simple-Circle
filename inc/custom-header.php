@@ -10,8 +10,11 @@
 
     <?php $header_image = get_header_image();
     if ( ! empty( $header_image ) ) { ?>
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-            <img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo
+        esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+            <img src="<?php header_image(); ?>" width="<?php echo
+            get_custom_header()->width; ?>" height="<?php echo
+            get_custom_header()->height; ?>" alt="" />
         </a>
     <?php } // if ( ! empty( $header_image ) ) ?>
 
@@ -28,7 +31,8 @@
  * Use feature detection of wp_get_theme() which was introduced
  * in WordPress 3.4.
  *
- * @todo Rework this function to remove WordPress 3.4 support when WordPress 3.6 is released.
+ * @todo Rework this function to remove WordPress 3.4 support when WordPress
+ * 3.6 is released.
  *
  * @uses _skele_header_style()
  * @uses _skele_admin_style()
@@ -38,7 +42,8 @@
  */
 function _skele_custom_header_setup() {
     $args = array(
-        'default-image'          => get_stylesheet_directory_uri().'/images/logo.white.png',
+        'default-image'          =>
+        get_stylesheet_directory_uri().'/images/logo.white.png',
         'default-text-color'     => '000',
         'width'                  => 100,
         'height'                 => 100,
@@ -53,13 +58,6 @@ function _skele_custom_header_setup() {
 
     if ( function_exists( 'wp_get_theme' ) ) {
         add_theme_support( 'custom-header', $args );
-    } else {
-        // Compat: Versions of WordPress prior to 3.4.
-        define( 'HEADER_TEXTCOLOR',    $args['default-text-color'] );
-        define( 'HEADER_IMAGE',        $args['default-image'] );
-        define( 'HEADER_IMAGE_WIDTH',  $args['width'] );
-        define( 'HEADER_IMAGE_HEIGHT', $args['height'] );
-        add_custom_image_header( $args['wp-head-callback'], $args['admin-head-callback'], $args['admin-preview-callback'] );
     }
 }
 add_action( 'after_setup_theme', '_skele_custom_header_setup' );
@@ -73,7 +71,8 @@ add_action( 'after_setup_theme', '_skele_custom_header_setup' );
  * of this function.
  *
  * @todo Remove this function when WordPress 3.6 is released.
- * @return stdClass All properties represent attributes of the curent header image.
+ * @return stdClass All properties represent attributes of the curent header
+ * image.
  *
  * @package wordpressHTML5
  * @since wordpressHTML5 1.1
@@ -101,7 +100,8 @@ if ( ! function_exists( '_skele_header_style' ) ) :
 function _skele_header_style() {
 
     // If no custom options for text are set, let's bail
-    // get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+    // get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text
+    // (returns 'blank') or any hex value
     if ( HEADER_TEXTCOLOR == get_header_textcolor() )
         return;
     // If we get this far, we have custom styles. Let's do this.
@@ -172,13 +172,17 @@ if ( ! function_exists( '_skele_admin_header_image' ) ) :
 function _skele_admin_header_image() { ?>
     <div id="headimg">
         <?php
-        if ( 'blank' == get_header_textcolor() || '' == get_header_textcolor() )
+        if ( 'blank' == get_header_textcolor() || '' == get_header_textcolor()
+            )
             $style = ' style="display:none;"';
         else
             $style = ' style="color:#' . get_header_textcolor() . ';"';
         ?>
-        <h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-        <div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+        <h1><a id="name"<?php echo $style; ?> onclick="return false;"
+        href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name'
+        ); ?></a></h1>
+        <div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' );
+        ?></div>
         <?php $header_image = get_header_image();
         if ( ! empty( $header_image ) ) : ?>
             <img src="<?php echo esc_url( $header_image ); ?>" alt="" />
